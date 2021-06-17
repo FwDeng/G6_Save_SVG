@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>G6_Export</title>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g6/4.3.3/dist/g6.min.js"></script>
+    <style>
+        #container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        #save {
+            position: absolute;
+            width: 7%;
+            height: 3%;
+            top: 5%;
+            left: 5%;
+            z-index: 2;
+        }
+        .g6-component-tooltip {
+            background-color: rgba(0,0,0, 0.65);
+            padding: 10px;
+            box-shadow: rgb(174, 174, 174) 0px 0px 10px;
+            width: fit-content;
+            color: #fff;
+            border-radius = 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <button id="save" onclick="btnAction()">Save as svg</button>
+    <script src="../static/graph.js"></script>
+    <script>
+        function btnAction() {
+            graph.downloadImage('my_graph');
+        }
+    </script>
+</body>
+</html>
